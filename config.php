@@ -14,3 +14,6 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 ?>
+
+
+//This is the command needed to connect our other php scripts "require_once "config.php";"
