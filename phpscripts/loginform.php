@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+    header("location: navhome.php");
     exit;
 }
  
@@ -19,6 +19,7 @@ $username_err = $password_err = $login_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
+    //IN HERE IS WHERE WE WILL CHECK TO VERIFY A SCHOOL EMAIL 
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
     } else{
@@ -63,13 +64,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;              
                             
-                            if($username == "Admin")
-                                header("location: updateInventory.html");
-                            else if($username == "Manager")
-                                header("location: managerPage.html");
+                            if($username == "Instructor")
+                                header("location: instructorHome.html");
                             else    
                             // Redirect user to welcome page
-                            header("location: welcome.php");
+                            header("location: navhome.html");
                             
                             
                         } else{
