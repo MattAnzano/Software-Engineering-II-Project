@@ -5,6 +5,6 @@
   </head>
   <body>
   <?php include 'phpscripts/navbar.php';?>
-  <?php echo 'this is the calendar page.';?>
+  <?php echo 'this is the courses page.';?>
   </body>
 </html>
