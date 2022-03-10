@@ -1,7 +1,7 @@
 <DOCTYPE html>
 <html>
   <head>
-    <?php require 'bootstrap.php';?>
+    <?php require '../bootstrap.php';?>
   </head>
   <body>
     <!-- Change this to edit the background of the navbar/ bg-danger refers to a contextual color. -->
