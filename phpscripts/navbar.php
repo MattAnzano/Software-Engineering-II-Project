@@ -1,14 +1,7 @@
 <DOCTYPE html>
 <html>
   <head>
-    <title>Home Page</title>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <?php require '../bootstrap.php';?>
   </head>
   <body>
     <!-- Change this to edit the background of the navbar/ bg-danger refers to a contextual color. -->
@@ -25,13 +18,10 @@
                any dropdowns, etc. use nav-item/nav-item dropdown to add them. -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="navhome.html">Home</a>
+              <a class="nav-link" href="calendar.php">Calendar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="calendar.html">Calendar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="courses.html">Courses</a>
+              <a class="nav-link" href="courses.html">Courses</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="other.html">Other</a>
@@ -59,7 +49,6 @@
       </div>
     </nav>
     <div class="container-fluid p-3">
-      <p>testing courses</p>
     </div>
   </body>
 </html>
