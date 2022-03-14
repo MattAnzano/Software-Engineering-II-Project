@@ -5,7 +5,7 @@
   </head>
   <body>
     <!-- Change this to edit the background of the navbar/ bg-danger refers to a contextual color. -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <nav class="navbar navbar-light bg-danger">
       <!-- Contains all of the following elements of the navbar, like the text, links, -->
       <div class="container-fluid">
         <!-- navbar-brand just refers to a specific contextual setting. -->
