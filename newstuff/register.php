@@ -169,6 +169,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-secondary ml-2" value="Reset">
             </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadio" id="userType" value="student">
+                <label class="form-check-label" for="inlineRadio">
+                  I'm a student
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadio" id="userType" value="instructor">
+                <label class="form-check-label" for="inlineRadio">
+                  I'm a instructor
+                </label>
+            </div>
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>
