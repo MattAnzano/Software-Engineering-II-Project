@@ -12,19 +12,19 @@ $username_err = $password_err = $confirm_password_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if(empty(trim($_POST["fname"]))){
-        $password_err = "Please enter a name.";
+        $fname_err = "Please enter a name.";
     } elseif(!preg_match('/^[a-zA-Z]+$/', trim($_POST["fname"]))){
-        $password_err = "Name must only use letters.";
+        $fname_err = "Name must only use letters.";
     } else{
-        $password = trim($_POST["fname"]);
+        $fname = trim($_POST["fname"]);
     }
 
     if(empty(trim($_POST["lname"]))){
-        $password_err = "Please enter a name.";
+        $lname_err = "Please enter a name.";
     } elseif(!preg_match('/^[a-zA-Z]+$/', trim($_POST["lname"]))){
-        $password_err = "Name must only use letters.";
+        $lname_err = "Name must only use letters.";
     } else{
-        $password = trim($_POST["lname"]);
+        $lname = trim($_POST["lname"]);
     }
 
     // Validate username
