@@ -146,7 +146,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $name_err; ?></span>
             </div>
             <div class="form-group">
-                <label>First Name</label>
+                <label>Last Name</label>
                 <input type="text" name="lname" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $lname; ?>">
                 <span class="invalid-feedback"><?php echo $fname_err; ?></span>
             </div>
