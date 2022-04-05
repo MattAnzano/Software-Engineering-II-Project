@@ -107,9 +107,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_fname = $fname;
             $param_lname = $lname;
 
-            echo "Prepared!";
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt) && mysqli_stmt_execute($stmt2)){
+            if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
                 echo "$sql2";
                 header("location: login.php");
