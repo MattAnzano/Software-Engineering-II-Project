@@ -107,6 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_fname = $fname;
             $param_lname = $lname;
 
+            echo "Prepared!";
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt) && mysqli_stmt_execute($stmt2)){
                 // Redirect to login page
@@ -118,9 +119,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Close statement
             mysqli_stmt_close($stmt);
-        }
-        else {
-          echo "Oops, something went wrong with preparing! Try again.";
         }
     }
 
