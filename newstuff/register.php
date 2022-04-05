@@ -87,8 +87,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-        $sql2 = ""
-        $type_check= $_POST['userType'];
+        $sql2 = "";
+        $type_check = $_POST['userType'];
         if($type_check == 'instructor') {
           $sql2 = "INSERT INTO Instructors (username, fname, lname) VALUE (?, ?, ?)";
         }
