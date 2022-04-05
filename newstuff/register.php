@@ -84,6 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($fname_err) && empty($lname_err)){
 
+        $type_check = $_POST['userType'];
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
 
@@ -98,6 +99,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
+                echo "$type_check";
                 header("location: login.php");
             } else{
                 echo "Oops, something went wrong! Try again.";
