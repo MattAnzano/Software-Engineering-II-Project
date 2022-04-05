@@ -84,29 +84,43 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($fname_err) && empty($lname_err)){
 
-        $type_check = $_POST['userType'];
+
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        $sql2 = ""
+        $type_check= $_POST['userType'];
+        if($type_check == 'instructor') {
+          $sql2 = "INSERT INTO Instructors (username, fname, lname) VALUE (?, ?, ?)";
+        }
+        else {
+          $sql2 = "INSERT INTO Students (username, fname, lname) VALUE (?, ?, ?)";
+        }
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if($stmt = mysqli_prepare($link, $sql) && $stmt2 = mysqli_prepare($link, $sql2)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt2, "sss", $param_username, $param_fname, $param_lname);
 
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_fname = $fname;
+            $param_lname = $lname;
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
+            if(mysqli_stmt_execute($stmt) && mysqli_stmt_execute($stmt2)){
                 // Redirect to login page
-                echo "$type_check";
+                echo "$sql2";
                 header("location: login.php");
             } else{
-                echo "Oops, something went wrong! Try again.";
+                echo "Oops, something went wrong with executing! Try again.";
             }
 
             // Close statement
             mysqli_stmt_close($stmt);
+        }
+        else {
+          echo "Oops, something went wrong with preparing! Try again.";
         }
     }
 
