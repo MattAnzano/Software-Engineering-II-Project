@@ -122,7 +122,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                echo "$isInstructor";
                 header("location: login.php");
             } else{
                 echo "Oops, something went wrong with executing! Try again.";
