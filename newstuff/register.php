@@ -6,7 +6,11 @@ require_once "db.php";
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
 
-
+function verifyEmail($email) {
+    list ($user, $domain) = explode('@', $email);
+    $is_msu = ($domain == 'montclair.edu');
+    return $is_msu;
+}
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -117,13 +121,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-
-    function verifyEmail($email) {
-        list ($user, $domain) = explode('@', $email);
-        $is_msu = ($domain == 'montclair.edu');
-        return $is_msu;
-    }
-
     // Close connection
     mysqli_close($link);
 }
