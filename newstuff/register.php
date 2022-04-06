@@ -62,6 +62,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
+    // Validate Email
+    if(empty(trim($_POST["email"]))){
+      $email_err = "Please enter an email.";
+    } elseif(!verifyEmail($_POST["email"])){
+      $email_err = "Please provide a valid MSU email.";
+    } else{
+      $email = trim($_POST["email"]);
+    }
+
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";
