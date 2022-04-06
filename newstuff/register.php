@@ -94,24 +94,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
+    $isInstructor = "";
+    if($_POST["usertype"] == "instructor"){
+      $isInstructor = "TRUE";
+    } else {
+      $isInstructor = "FALSE";
+    }
+
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($fname_err) && empty($lname_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO users (username, password, email, isInstructor, fname, lname) VALUES (?, ?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssssss", $param_username, $param_password, $param_email, $param_type, $param_fname, $param_lname);
 
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_email = $email;
+            $param_type = $isInstructor;
+            $param_fname = $fname;
+            $param_lname = $lname;
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                echo "$sql2";
+                echo "$isInstructor";
                 header("location: login.php");
             } else{
                 echo "Oops, something went wrong with executing! Try again.";
@@ -119,6 +130,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Close statement
             mysqli_stmt_close($stmt);
+        }
+        else {
+          echo "Oops, something went wrong with preparing! Try again.";
         }
     }
     // Close connection
