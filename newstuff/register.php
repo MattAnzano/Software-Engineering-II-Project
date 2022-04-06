@@ -123,6 +123,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
                 header("location: login.php");
+                echo "$isInstructor";
             } else{
                 echo "Oops, something went wrong with executing! Try again.";
             }
