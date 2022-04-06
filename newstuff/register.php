@@ -192,14 +192,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadio" id="userType" value="student">
-                <label class="form-check-label" for="inlineRadio">
+                <input class="form-check-input" type="radio" name="userType" value="student" checked>
+                <label class="form-check-label" for="userType">
                   I'm a student
                 </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadio" id="userType" value="instructor">
-                <label class="form-check-label" for="inlineRadio">
+                <input class="form-check-input" type="radio" name="userType" value="instructor">
+                <label class="form-check-label" for="userType">
                   I'm a instructor
                 </label>
             </div>
