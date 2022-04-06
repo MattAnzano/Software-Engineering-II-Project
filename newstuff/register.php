@@ -95,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     $isInstructor = "";
-    if($_POST["usertype"] == "instructor"){
+    if($_POST["userType"] == "instructor"){
       $isInstructor = "TRUE";
     } else {
       $isInstructor = "FALSE";
