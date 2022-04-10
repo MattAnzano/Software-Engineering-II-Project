@@ -46,7 +46,7 @@
         z-index: 9;
       }
       .formContainer {
-        max-width: 300px;
+        max-width: 550px;
         padding: 20px;
         background-color: #fff;
       }
@@ -114,25 +114,29 @@
       </div>
     </div>
 
-    <h2>Popup Form</h2>
-    <p>Click on the "Open Form" button to open the popup form.</p>
+    <h2>Create Course</h2>
+    <p>To create a course, click on the button and fill in the required fields.</p>
     <div class="openBtn">
-      <button class="openButton" onclick="openForm()"><strong>Open Form</strong></button>
+      <button class="openButton" onclick="openForm()"><strong>Create</strong></button>
     </div>
     <div class="loginPopup">
       <div class="formPopup" id="popupForm">
-        <form action="/action_page.php" class="formContainer">
-          <h2>Please Log in</h2>
-          <label for="email">
-            <strong>E-mail</strong>
+        <form action="./addCourse.php" class="formContainer">
+          <h2>Enter Course Info</h2>
+          <label for="courseName">
+            <strong>Course Name</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
-          <label for="psw">
-            <strong>Password</strong>
+          <input type="text" id="courseName" placeholder="course name" name="coursename" required>
+          <label for="numberOfStudents">
+            <strong>Number Of Students</strong>
           </label>
-          <input type="password" id="psw" placeholder="Your Password" name="psw" required>
-          <button type="submit" class="btn">Log in</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          <input type="number" id="numofstudents" placeholder="30" name="numofstudents" required>
+          <label for="course description">
+            <strong>Course Decsription</strong>
+          </label>
+          <textarea id="textarea" name="textarea" rows="4" cols ="50"></textarea>
+          <button type="submit" class="btn">Create Course</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
         </form>
       </div>
     </div>
