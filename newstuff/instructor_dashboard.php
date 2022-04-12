@@ -98,8 +98,8 @@
             <h5 class="card-title">Class Title 1</h5>
             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <a href="/courses.html" class="card-link">Card link</a>
+            <a href="/courses.html" class="card-link">Another link</a>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -107,8 +107,8 @@
             <h5 class="card-title">Class Title 1</h5>
             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <a href="/courses" class="card-link">Card link</a>
+            <a href="/courses" class="card-link">Another link</a>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@
     </div>
     <div class="loginPopup">
       <div class="formPopup" id="popupForm">
-        <form action="./addCourse.php" class="formContainer">
+        <form action="./addCourse.php" class="formContainer" method="POST">
           <h2>Enter Course Info</h2>
           <label for="courseName">
             <strong>Course Name</strong>
@@ -134,7 +134,7 @@
           <label for="course description">
             <strong>Course Decsription</strong>
           </label>
-          <textarea id="textarea" name="textarea" rows="4" cols ="50"></textarea>
+          <textarea id="classdescription" name="classdescription" rows="4" cols ="50"></textarea>
           <button type="submit" class="btn">Create Course</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
         </form>
