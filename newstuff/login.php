@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["lname"] = $lname;
 
                             if($isInstructor == "TRUE")
-                                header("location: instructor_dashboard.php");
+                                header("Mentor/index.html");
                             else
                             // Redirect user to welcome page
                               header("location: dashboard.php");
