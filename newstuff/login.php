@@ -67,10 +67,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["lname"] = $lname;
 
                             if($isInstructor == "TRUE")
-                                header("Mentor/index.html");
+                                header("instructor/index.html");
                             else
                             // Redirect user to welcome page
-                              header("location: dashboard.php");
+                              header("StudentView/index.html");
                             
                         } else{
                             // Password is not valid, display a generic error message
