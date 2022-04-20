@@ -42,18 +42,18 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1>
+      <h1 class="logo me-auto"><a href="index.html">SmartPlan</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Dashboard</a></li>
           <li><a href="about.html">About</a></li>
           <li><a class="active" href="courses.html">Courses</a></li>
-          <li><a href="trainers.html">Trainers</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          <!--<li><a href="trainers.html">Trainers</a></li>-->
+          <!--<li><a href="events.html">Events</a></li>-->
+          <!--<li><a href="pricing.html">Pricing</a></li>-->
 
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -72,12 +72,12 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <!--<li><a href="contact.html">Contact</a></li>-->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="courses.html" class="get-started-btn">Get Started</a>
+      <a href="addCourse.php" class="get-started-btn">Add Course</a>
 
     </div>
   </header><!-- End Header -->
@@ -109,23 +109,23 @@
           <div class="col-lg-4">
 
             <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Trainer</h5>
-              <p><a href="#">Walter White</a></p>
+              <h5>Instructor</h5>
+              <p id="instructorName" name="instructorName">Walter White</p>
             </div>
 
             <div class="course-info d-flex justify-content-between align-items-center">
               <h5>Course Fee</h5>
-              <p>$165</p>
+              <p id="courseFee" name="courseFee">$165</p>
             </div>
 
             <div class="course-info d-flex justify-content-between align-items-center">
               <h5>Available Seats</h5>
-              <p>30</p>
+              <p id="numberofseats" name="numberofseats">30</p>
             </div>
 
             <div class="course-info d-flex justify-content-between align-items-center">
               <h5>Schedule</h5>
-              <p>5.00 pm - 7.00 pm</p>
+              <p id="courseschedule" name="courseschedule">5.00 pm - 7.00 pm</p>
             </div>
 
           </div>
