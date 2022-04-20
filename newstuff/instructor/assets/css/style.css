@@ -611,7 +611,7 @@ section {
 # Features
 --------------------------------------------------------------*/
 .features {
-  padding-top: 0px;
+  padding-top: 25px;
 }
 .features .icon-box {
   display: flex;
@@ -637,10 +637,10 @@ section {
   transition: 0.3s;
 }
 .features .icon-box:hover {
-  border-color: #5fcf80;
+  border-color: #ee614f;
 }
 .features .icon-box:hover h3 a {
-  color: #5fcf80;
+  color: #000000;
 }
 
 /*--------------------------------------------------------------
