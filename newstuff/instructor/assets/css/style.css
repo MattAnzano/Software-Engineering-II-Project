@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #5fcf80;
+  color: #e44545;
   text-decoration: none;
 }
 
 a:hover {
-  color: #86db9f;
+  color: #e26161;
   text-decoration: none;
 }
 
@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 */
 .get-started-btn {
   margin-left: 22px;
-  background: #5fcf80;
+  background: #df3b3b;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #37423b;
+  color: #f36868;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -354,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: url("../img/hero-bg.jpg") top center;
+  /*background: url("../img/hero-bg.jpg") top center;*/
   background-size: cover;
   position: relative;
 }
@@ -471,7 +471,7 @@ section {
 .breadcrumbs {
   margin-top: 73px;
   text-align: center;
-  background: #5fcf80;
+  background: #ee5122;
   padding: 30px 0;
   color: #fff;
 }
@@ -611,7 +611,7 @@ section {
 # Features
 --------------------------------------------------------------*/
 .features {
-  padding-top: 0px;
+  padding-top: 25px;
 }
 .features .icon-box {
   display: flex;
@@ -637,10 +637,10 @@ section {
   transition: 0.3s;
 }
 .features .icon-box:hover {
-  border-color: #5fcf80;
+  border-color: #ee614f;
 }
 .features .icon-box:hover h3 a {
-  color: #5fcf80;
+  color: #000000;
 }
 
 /*--------------------------------------------------------------
