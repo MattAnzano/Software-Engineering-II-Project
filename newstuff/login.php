@@ -70,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 header("instructor/index.html");
                             else
                             // Redirect user to welcome page
-                              header("StudentView/index.html");
+                              header("student/index.html");
                             
                         } else{
                             // Password is not valid, display a generic error message
